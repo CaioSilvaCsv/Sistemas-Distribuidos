@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package cliente;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +6,7 @@ import java.net.Socket;
 
 /**
  * 
- * @author Caio da silva, Carlos Henrique, Luiz Felipe, Rithielle;
+ * @author Caio da silva, Carlos Henrique, Luiz Felipe, Rithiellen Máxima;
  */
 public class Cliente {
     public static void main(String[] args) {
