@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 
 /**
  *
- * @author caios
+ * @author Caio da silva, Carlos Henrique, Luiz Felipe, Rithielle;
  */
 public class Servidor {
 
@@ -27,14 +27,18 @@ public class Servidor {
             System.out.println("[SERVIDOR] Relogio online na porta : " + porta);
 
             while(true){
+                // aguarda conexão
                 try (Socket cliente = server.accept();
                     PrintWriter out = new PrintWriter(cliente.getOutputStream(), true)){
                         System.out.println("[CONEXÃO] Cliente " + cliente.getInetAddress() + " conectado");
-
+                        
+                        // Busca a hora atual do servidor
                         LocalDateTime now = LocalDateTime.now();
+                        // Formata a hora
                         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+                        // Imprime a hora no console
                         String formattedDateTime = now.format(formatter);
-                        System.out.println(formattedDateTime);
+                        // Imprime a hora no cliente
                         out.println("Hora atual do servidor: " + formattedDateTime);
                 }catch(IOException ioe){
                     System.out.println("Error no cliente: " + ioe.getMessage());
